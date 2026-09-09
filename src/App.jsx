@@ -4,6 +4,9 @@ import pcmBackground from './media/pcmBackground.jpg';
 import pcmBackground2 from './media/pcmBackground_2.png';
 import pcmBackground4 from './media/pcmBackground_4.jpg';
 import mutyaPcm from './media/mutya_pcm.jpg';
+import arLogo from './media/AR-logo.png';
+import artifactsLogo from './media/ARtifactsLogo2.png';
+import screenPlaceholder from './media/screenPlaceholder1.png';
 import Footer from './Footer';
 const navItems = [
   { label: 'Home', href: '#home' },
@@ -57,7 +60,7 @@ function App() {
   return (
     <>
       <header className="site-header">
-        <img src="src/media/AR-logo.png" alt="ARtifacts Nav Logo" className="NavLogo" />
+        <img src={arLogo} alt="ARtifacts Nav Logo" className="NavLogo" />
         <nav>
           {navItems.map((item) => (
             item.label === 'Download' ? (
@@ -87,7 +90,7 @@ function App() {
               <img ref={homeImageRef} src={pcmBackground} alt="" aria-hidden="true" />
             </div>
             <div className="hero hero-content">
-              <img src="src/media/ARtifactsLogo2.png" alt="ARtifacts Logo" className="logoHeader" />
+              <img src={artifactsLogo} alt="ARtifacts Logo" className="logoHeader" />
               <p className="textHome">*Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
               <a className="btn" href="#download" onClick={(e) => { e.preventDefault(); handleDownload(); }}>
                 Download
@@ -100,7 +103,7 @@ function App() {
 
         <section className="about-background image-section" style={{ backgroundImage: `url(${pcmBackground4})` }}>
           <div className="content-block" id="about">
-            <img src="src/media/screenPlaceholder1.png" alt="App Preview" />
+            <img src={screenPlaceholder} alt="App Preview" />
             <div className="content-block-copy">
               <h2>Project Introduction</h2>
               <p>AR-tifacts is an application that presents museum artifacts through augmented reality. Users can point a phone at a flat surface to view historical and cultural objects in three dimensions. The objects appear at true scale and can be viewed from every angle. This method allows learners, students, and history enthusiasts to study artifacts without visiting a physical museum.</p>
