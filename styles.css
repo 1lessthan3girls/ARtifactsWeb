@@ -23,15 +23,15 @@
 
 .NavLogo{
   display: block;
-  width: clamp(40px, 5vw, 58px);
+  width: 50px;
   height: auto;
 }
 
 .logoHeader{
   display:block;
-  width: min(300px, 68vw);
+  width: 300px;
   height: auto;
-  margin: 0 auto clamp(20px, 4vw, 30px);
+  margin: 0 auto 30px;
 
 }
 
@@ -371,143 +371,6 @@ section.in-view,
   text-decoration: underline;
 }
 
-@media (max-width: 900px) {
-  .site-header {
-    padding: 18px 24px;
-  }
-
-  .site-header nav {
-    display: flex;
-    align-items: center;
-    gap: clamp(12px, 3vw, 24px);
-  }
-
-  .site-header a {
-    margin-left: 0;
-    font-size: 0.95rem;
-  }
-
-  .hero {
-    padding: 56px 24px;
-  }
-
-  .content-block {
-    max-width: 680px;
-    padding: 28px;
-  }
-
-  .content-block img {
-    width: min(100%, 260px);
-  }
-
-  .feature-grid {
-    max-width: 680px;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .feature-card {
-    padding: 28px;
-  }
-
-  .footer-reveal {
-    min-height: auto;
-    padding: 72px 20px 8vh;
-  }
-
-  .footer-links {
-    padding: 40px 32px 26px;
-  }
-}
-
-@media (max-width: 640px) {
-  .site-header {
-    align-items: flex-start;
-    gap: 16px;
-    padding: 14px 16px;
-  }
-
-  .site-header nav {
-    flex: 1;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 8px 14px;
-  }
-
-  .site-header a {
-    font-size: 0.82rem;
-  }
-
-  .hero-section {
-    height: 145vh;
-  }
-
-  .hero-sticky {
-    min-height: 100svh;
-  }
-
-  .hero {
-    padding: 40px 18px;
-  }
-
-  .hero p,
-  .content-block p {
-    font-size: 0.92rem;
-  }
-
-  .btn {
-    padding: 12px 22px;
-  }
-
-  .about-background,
-  .feature-background {
-    min-height: auto;
-    padding: 48px 16px;
-  }
-
-  .content-block {
-    grid-template-columns: 1fr;
-    margin: 24px auto;
-    padding: 24px 20px;
-    gap: 28px;
-  }
-
-  .content-block img {
-    width: min(100%, 220px);
-  }
-
-  .feature-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    margin: 12px auto;
-  }
-
-  .feature-card {
-    padding: 24px 20px;
-  }
-
-  .footer-links {
-    padding: 32px 20px 22px;
-    border-radius: 12px;
-  }
-
-  .footer-intro {
-    margin-bottom: 30px;
-  }
-
-  .footer-intro h2 {
-    font-size: 2rem;
-  }
-
-  .footer-groups {
-    grid-template-columns: 1fr;
-    gap: 26px;
-    padding-bottom: 34px;
-  }
-
-  .footer-credits {
-    font-size: 0.75rem;
-  }
-}
 
 
 
