@@ -1,5 +1,4 @@
-import { useEffect, useRef } from 'react';
-import { setupScrollAnimation, handleDownload } from '../script.js';
+import { handleDownload } from '../script.js';
 import pcmBackground from './media/pcmBackground.jpg';
 import pcmBackground2 from './media/pcmBackground_2.png';
 import pcmBackground4 from './media/pcmBackground_4.jpg';
@@ -27,36 +26,6 @@ const featureCards = [
 ];
 
 function App() {
-  const homeSectionRef = useRef(null);
-  const homeImageRef = useRef(null);
-
-  useEffect(() => {
-    const removeScrollAnimation = setupScrollAnimation();
-
-    const updateHomeZoom = () => {
-      const section = homeSectionRef.current;
-      const image = homeImageRef.current;
-
-      if (!section || !image) return;
-
-      const progress = Math.min(
-        1,
-        Math.max(0, -section.getBoundingClientRect().top / (section.offsetHeight - window.innerHeight))
-      );
-      image.style.transform = `scale(${1 + progress * 0.28})`;
-    };
-
-    updateHomeZoom();
-    window.addEventListener('scroll', updateHomeZoom, { passive: true });
-    window.addEventListener('resize', updateHomeZoom);
-
-    return () => {
-      removeScrollAnimation();
-      window.removeEventListener('scroll', updateHomeZoom);
-      window.removeEventListener('resize', updateHomeZoom);
-    };
-  }, []);
-
   return (
     <>
       <header className="site-header">
@@ -84,14 +53,15 @@ function App() {
       </header>
 
       <main className="homeBG" id="home">
-        <section ref={homeSectionRef} className="hero-section">
+        <section id="home" className="hero-section">
           <div className="hero-sticky">
             <div className="hero-background">
-              <img ref={homeImageRef} src={pcmBackground} alt="" aria-hidden="true" />
+              <img src={pcmBackground} alt="" aria-hidden="true" />
             </div>
             <div className="hero hero-content">
               <img src={artifactsLogo} alt="ARtifacts Logo" className="logoHeader" />
-              <p className="textHome">*Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              {/* <h1>ARtifacts</h1> */}
+              <p className="textHome">Step into Pasig City Museum's collection in AR. Explore, inspect, and piece back together real 3D artifacts — anytime, anywhere, right from your phone.</p>
               <a className="btn" href="#download" onClick={(e) => { e.preventDefault(); handleDownload(); }}>
                 Download
               </a>
@@ -101,8 +71,8 @@ function App() {
         </section>
        
 
-        <section className="about-background image-section" style={{ backgroundImage: `url(${pcmBackground4})` }}>
-          <div className="content-block" id="about">
+        <section id="about" className="about-background image-section" style={{ backgroundImage: `url(${pcmBackground4})` }}>
+          <div className="content-block">
             <img src={screenPlaceholder} alt="App Preview" />
             <div className="content-block-copy">
               <h2>Project Introduction</h2>

@@ -23,21 +23,21 @@
 
 .NavLogo{
   display: block;
-  width: 50px;
+  width: clamp(40px, 5vw, 58px);
   height: auto;
 }
 
 .logoHeader{
   display:block;
-  width: 300px;
+  width: min(300px, 68vw);
   height: auto;
-  margin: 0 auto 30px;
+  margin: 0 auto clamp(20px, 4vw, 30px);
 
 }
 
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
@@ -49,15 +49,13 @@ body {
 
 section,
 .feature-card {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  opacity: 1;
+  transform: none;
+  transition: none;
 }
 
-section.in-view,
-.feature-card.in-view {
-  opacity: 1;
-  transform: translateY(0);
+section[id] {
+  scroll-margin-top: 88px;
 }
 
 .homeBG {
@@ -67,12 +65,12 @@ section.in-view,
 
 .hero-section {
   position: relative;
-  height: 180vh;
+  height: 100vh;
   overflow: clip;
 }
 
 .hero-sticky {
-  position: sticky;
+  position: relative;
   top: 0;
   height: 100vh;
   overflow: hidden;
@@ -98,10 +96,6 @@ section.in-view,
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transform: scale(1);
-  transform-origin: center;
-  will-change: transform;
-
 }
 
 .hero-background2 {
@@ -121,6 +115,8 @@ section.in-view,
   position: relative;
   min-height: 100vh;
   padding: 72px 24px;
+  display: grid;
+  place-items: center;
   overflow: hidden;
 }
 
@@ -135,6 +131,12 @@ section.in-view,
   position: relative;
   z-index: 1;
   color: var(--light);
+}
+
+.herohero-content p {
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.05em;
+  margin-bottom: 20px;
 }
 
 .site-header {
@@ -186,8 +188,8 @@ section.in-view,
 }
 .content-block {
   background: white;
-  margin: 40px auto;
-  padding: 32px;
+  margin: 0 auto;
+  padding: 34px;
   max-width: 900px;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -197,26 +199,23 @@ section.in-view,
   box-shadow: 0 12px 24px rgba(0,0,0,.08);
 }
 
+.about-background {
+  position: relative;
+  min-height: 100vh;
+  padding: 72px 24px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
 .image-section {
   background-size: cover;
   background-position: center;
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.about-background::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(44, 29, 25, 0.2);
-}
-
-.about-background .content-block {
-  position: relative;
-  z-index: 1;
+  transition: none;
 }
 
 .content-block img {
-  width: 50%;
+  width: 55%;
   height: auto;
   border-radius: 12px;
   object-position: center;
@@ -233,15 +232,14 @@ section.in-view,
   font-size: 1.0rem;
   line-height: 1.5;
   font-family: 'Poppins', sans-serif;
-  font-weight: 200;
-
+  font-weight: 200; 
 }
 
 .feature-grid {
   display: grid;
   gap: 24px;
   max-width: 860px;
-  margin: 24px auto;
+  margin: 0 auto;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   position: relative;
   z-index: 1;
@@ -281,6 +279,9 @@ section.in-view,
 .footer-intro {
   max-width: 760px;
   margin-bottom: 38px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .footer-intro h2 {
@@ -296,11 +297,25 @@ section.in-view,
   line-height: 1.7;
 }
 
+.footer-intro .museum-description {
+  width: min(100%, 720px);
+  margin: 0 auto;
+  text-align: justify;
+  text-indent: 1em;
+}
+
 .footer-groups {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 36px 72px;
   padding-bottom: 58px;
+  justify-items: center;
+  text-align: center;
+}
+
+.footer-group {
+  width: 100%;
+  text-align: center;
 }
 
 .footer-group p {
@@ -312,8 +327,13 @@ section.in-view,
   margin-top: 8px;
   color: var(--dark);
   font-size: 0.85rem;
-  line-height: 1.3;
+  line-height: 1.5;
   white-space: pre-line;
+}
+
+.footer-description {
+  text-align: justify;
+  text-indent: 1em;
 }
 
 .footer-credits {
@@ -332,20 +352,12 @@ section.in-view,
   position: relative;
   min-height: 100vh;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  padding: 0 24px 12vh;
+  padding: 72px 72px;
   background-size: cover;
   background-position: center;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-
-.footer-reveal::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(44, 29, 25, 0.5);
-  pointer-events: none;
 }
 
 .footer-background::after {
@@ -371,6 +383,143 @@ section.in-view,
   text-decoration: underline;
 }
 
+@media (max-width: 900px) {
+  .site-header {
+    padding: 18px 24px;
+  }
+
+  .site-header nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(12px, 3vw, 24px);
+  }
+
+  .site-header a {
+    margin-left: 0;
+    font-size: 0.95rem;
+  }
+
+  .hero {
+    padding: 56px 24px;
+  }
+
+  .content-block {
+    max-width: 680px;
+    padding: 28px;
+  }
+
+  .content-block img {
+    width: min(100%, 260px);
+  }
+
+  .feature-grid {
+    max-width: 680px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .feature-card {
+    padding: 28px;
+  }
+
+  .footer-reveal {
+    min-height: 100vh;
+    padding: 72px 20px 8vh;
+  }
+
+  .footer-links {
+    padding: 40px 32px 26px;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    align-items: flex-start;
+    gap: 16px;
+    padding: 14px 16px;
+  }
+
+  .site-header nav {
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px 14px;
+  }
+
+  .site-header a {
+    font-size: 0.82rem;
+  }
+
+  .hero-section {
+    height: 100svh;
+  }
+
+  .hero-sticky {
+    min-height: 100svh;
+  }
+
+  .hero {
+    padding: 40px 18px;
+  }
+
+  .hero p,
+  .content-block p {
+    font-size: 0.92rem;
+  }
+
+  .btn {
+    padding: 12px 22px;
+  }
+
+  .about-background,
+  .feature-background {
+    min-height: 100svh;
+    padding: 48px 16px;
+  }
+
+  .content-block {
+    grid-template-columns: 1fr;
+    margin: 24px auto;
+    padding: 24px 20px;
+    gap: 18px;
+  }
+
+  .content-block img {
+    width: min(100%, 200px);
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 12px auto;
+  }
+
+  .feature-card {
+    padding: 24px 20px;
+  }
+
+  .footer-links {
+    padding: 32px 20px 22px;
+    border-radius: 12px;
+  }
+
+  .footer-intro {
+    margin-bottom: 30px;
+  }
+
+  .footer-intro h2 {
+    font-size: 2rem;
+  }
+
+  .footer-groups {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding-bottom: 34px;
+  }
+
+  .footer-credits {
+    font-size: 0.75rem;
+  }
+}
 
 
 

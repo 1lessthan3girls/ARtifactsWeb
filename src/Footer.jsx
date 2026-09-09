@@ -2,7 +2,7 @@ const footerGroups = [
   {
     heading: 'Project',
     items: [
-      { label: 'About', subText: 'This project is in collaboration with Pasig City Museum for the preservation and promotion of local cultural heritage.' },
+      { label: 'About', subText: 'ARtifacts is developed in collaboration with Pasig City Museum, in support of the preservation and promotion of local cultural heritage. This project is created for educational purposes by fourth-year students of National University – Manila, as part of their Capstone project titled "AR-tifacts: A Gamified Augmented Reality Platform with 3D Museum Artifacts for Historical and Cultural Preservation." Through this collaboration, the team aims to make Philippine history more accessible, engaging, and memorable for present and future generations.' },
     ],
   },
   {
@@ -30,11 +30,13 @@ const footerGroups = [
 
 function Footer({ backgroundImage, onDownload }) {
   return (
-    <section className="footer-reveal" style={{ backgroundImage: `url(${backgroundImage})` }}>
-      <div className="footer-links" id="contact">
+    <section id="contact" className="footer-reveal" style={{ backgroundImage: `url(${backgroundImage})` }}>
+      <div className="footer-links">
         <div className="footer-intro">
-          <h2>Footer</h2>
-          <p>Learn more about the project, the people behind it, and how to get in touch.</p>
+          <h2>Pasig City Museum</h2>
+          <p>Plaza Rizal, Brgy. San Jose, Pasig City</p>
+          <p className="museum-description">The Pasig City Museum is an engaging and interactive museum located in Barangay San Jose, Pasig City, in the historic Concepcion Mansion. It was built in 1937 and served as a Japanese detention center during WWII until being acquired in 1980. In 2008, it transformed into a museum with historical artifacts, interactive exhibits, and a venue for cultural events. In 2018, the National Museum of the Philippines declared it as an Important Cultural Property.</p>
+
         </div>
 
         <div className="footer-groups">
@@ -52,7 +54,7 @@ function Footer({ backgroundImage, onDownload }) {
                     ) : (
                       <span className="footer-item-content">
                         <span>{item.label}</span>
-                        <small>{item.subText}</small>
+                        <small className={group.heading === 'Project' ? 'footer-description' : undefined}>{item.subText}</small>
                       </span>
                     )}
                   </span>
@@ -63,7 +65,6 @@ function Footer({ backgroundImage, onDownload }) {
         </div>
 
         <div className="footer-credits">
-          Made with care by 1lessThan3Girls. Licensed under the MIT License.
         </div>
       </div>
     </section>
