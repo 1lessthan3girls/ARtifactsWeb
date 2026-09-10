@@ -7,6 +7,7 @@ import arLogo from './media/AR-logo.png';
 import artifactsLogo from './media/ARtifactsLogo2.png';
 import ScreenPreview1 from './App_Screens/HomeScreen.jpg';
 import ScreenPreview2 from './App_Screens/ExhibitCollectionSceen.jpg';
+import ArtifactsInfoScreen from './App_Screens/ArtifactsInfoScreen.jpg';
 import Footer from './Footer';
 const navItems = [
   { label: 'Home', href: '#home' },
@@ -18,7 +19,7 @@ const navItems = [
 const featureCards = [
   {
     title: 'App Feature',
-    text: 'Explore curated artifacts, immersive stories, and personalized tours.',
+    text: "View real museum artifacts in AR, explore their curated history and audio narration, then test what you've learned through a hands-on reconstruction game.",
   },
   {
     title: 'Mobile Ready',
@@ -87,6 +88,7 @@ function App() {
         </section>
 
         <section className="feature-background image-section" style={{ backgroundImage: `url(${pcmBackground2})` }}>
+          <img className="feature-preview" src={ArtifactsInfoScreen} alt="Artifact information screen preview" />
           <div className="feature-grid">
             {featureCards.map((card) => (
               <div key={card.title} className="feature-card">
