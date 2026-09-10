@@ -74,13 +74,13 @@ function App() {
             <img src={ScreenPreview1} alt="App Preview" />
             <div className="content-block-copy">
               <h2>Project Introduction</h2>
-              <p> </p>
+              <p>ARtifacts lets visitors explore museum artifacts the way a physical gallery visit would — grouped into curated exhibits, each with historical background and context, so every piece is understood within its own place in history. From there, visitors can view artifacts in augmented reality, listen to audio narration, and test their understanding through a hands-on reconstruction game, turning passive browsing into active learning. </p>
             </div>
           </div>
           <div className="content-block2">
             <div className="content-block-copy2">
-              <h2>Project Introduction</h2>
-              <p> </p>
+              <h2>Exhibits</h2>
+              <p>Artifacts are organized into curated exhibits, each grounded in its own historical period and background. This gives visitors context alongside the object itself, helping them understand not just what a piece is, but the story and era it belongs to.</p>
             </div>
             <img src={ScreenPreview2} alt="App Preview" />
           </div>
