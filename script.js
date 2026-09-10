@@ -1,4 +1,4 @@
-import apkUrl from './src/app-apk/Dummy-1.0.apk';
+import apkUrl from './src/app-apk/ARtifactsTest2.apk';
 
 // Download button functionality
 export const handleDownload = () => {
