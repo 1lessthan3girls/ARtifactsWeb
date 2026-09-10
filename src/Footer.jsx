@@ -8,17 +8,20 @@ const footerGroups = [
     ],
   },
   {
-    heading: 'Address',
+    heading: 'Group',
     items: [
-      { label: 'National University - Manila', subText: '551 M.F. Jhocson St. Sampaloc, Manila, PH 1008' },
+      { 
+       label: '1lessThan3Girls',
+        subText: 'Altares, Beatriz Faye\nCastillo, Marienel\nCortuna, Jhustine\nParaoan, Christian Jake\nPiamonte, Caurie\nSan Juan, Miguel',
+
+       },
     ]
   },
   {
-    heading: 'Group',
+    heading: 'Address',
     items: [
       {
-        label: '1lessThan3Girls',
-        subText: 'Altares, Beatriz Faye\nCastillo, Marienel\nCortuna, Jhustine\nParaoan, Christian Jake\nPiamonte, Caurie\nSan Juan, Miguel',
+        label: 'National University - Manila', subText: '551 M.F. Jhocson St. Sampaloc, Manila, PH 1008'        
       },
     ]
   },
