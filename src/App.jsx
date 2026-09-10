@@ -5,7 +5,8 @@ import pcmBackground4 from './media/pcmBackground_4.jpg';
 import mutyaPcm from './media/mutya_pcm.jpg';
 import arLogo from './media/AR-logo.png';
 import artifactsLogo from './media/ARtifactsLogo2.png';
-import screenPlaceholder from './media/screenPlaceholder1.png';
+import ScreenPreview1 from './App_Screens/HomeScreen.jpg';
+import ScreenPreview2 from './App_Screens/ExhibitCollectionSceen.jpg';
 import Footer from './Footer';
 const navItems = [
   { label: 'Home', href: '#home' },
@@ -53,15 +54,12 @@ function App() {
       </header>
 
       <main className="homeBG" id="home">
-        <section id="home" className="hero-section">
+        <section id="home" className="hero-section image-section" style={{ backgroundImage: `url(${pcmBackground})` }}>
           <div className="hero-sticky">
-            <div className="hero-background">
-              <img src={pcmBackground} alt="" aria-hidden="true" />
-            </div>
             <div className="hero hero-content">
               <img src={artifactsLogo} alt="ARtifacts Logo" className="logoHeader" />
               {/* <h1>ARtifacts</h1> */}
-              <p className="textHome">Step into Pasig City Museum's collection in AR. Explore, inspect, and piece back together real 3D artifacts — anytime, anywhere, right from your phone.</p>
+              <p className="textHome">Step into Pasig City Museum's collection in AR-tifacts. Explore, inspect, and piece back together real 3D artifacts anytime, anywhere, right from your phone.</p>
               <a className="btn" href="#download" onClick={(e) => { e.preventDefault(); handleDownload(); }}>
                 Download
               </a>
@@ -73,18 +71,22 @@ function App() {
 
         <section id="about" className="about-background image-section" style={{ backgroundImage: `url(${pcmBackground4})` }}>
           <div className="content-block">
-            <img src={screenPlaceholder} alt="App Preview" />
+            <img src={ScreenPreview1} alt="App Preview" />
             <div className="content-block-copy">
               <h2>Project Introduction</h2>
-              <p>AR-tifacts is an application that presents museum artifacts through augmented reality. Users can point a phone at a flat surface to view historical and cultural objects in three dimensions. The objects appear at true scale and can be viewed from every angle. This method allows learners, students, and history enthusiasts to study artifacts without visiting a physical museum.</p>
+              <p> </p>
             </div>
+          </div>
+          <div className="content-block2">
+            <div className="content-block-copy2">
+              <h2>Project Introduction</h2>
+              <p> </p>
+            </div>
+            <img src={ScreenPreview2} alt="App Preview" />
           </div>
         </section>
 
-        <section className="feature-background image-section">
-          <div className="hero-background2">
-            <img src={pcmBackground2} alt="" aria-hidden="true" />
-          </div>
+        <section className="feature-background image-section" style={{ backgroundImage: `url(${pcmBackground2})` }}>
           <div className="feature-grid">
             {featureCards.map((card) => (
               <div key={card.title} className="feature-card">
