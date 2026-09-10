@@ -1,3 +1,5 @@
+import pcmLogo from './media/PCM-logo.jpg';
+
 const footerGroups = [
   {
     heading: 'Project',
@@ -33,6 +35,7 @@ function Footer({ backgroundImage, onDownload }) {
     <section id="contact" className="footer-reveal" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <div className="footer-links">
         <div className="footer-intro">
+          <img src={pcmLogo} alt="Pasig City Museum logo" className="footer-museum-logo" />
           <h2>Pasig City Museum</h2>
           <p>Plaza Rizal, Brgy. San Jose, Pasig City</p>
           <p className="museum-description">The Pasig City Museum is an engaging and interactive museum located in Barangay San Jose, Pasig City, in the historic Concepcion Mansion. It was built in 1937 and served as a Japanese detention center during WWII until being acquired in 1980. In 2008, it transformed into a museum with historical artifacts, interactive exhibits, and a venue for cultural events. In 2018, the National Museum of the Philippines declared it as an Important Cultural Property.</p>

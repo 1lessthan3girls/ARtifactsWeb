@@ -337,6 +337,14 @@ section[id] {
   line-height: 1.1;
 }
 
+.footer-museum-logo {
+  display: block;
+  width: min(180px, 60vw);
+  height: auto;
+  margin: 0 auto 16px;
+  border-radius: 8px;
+}
+
 .footer-intro p {
   max-width: 720px;
   font-size: 1rem;
