@@ -1,0 +1,11 @@
+{
+  "remoteName": "origin",
+  "projects": [
+    {
+      "id": "prj_L9Y9mgl1QvE6sKh3ZxITjKlVzzXR",
+      "name": "artifactweb",
+      "directory": ".",
+      "orgId": "team_86SB8Nf9cNkVpchnhdL9MjDi"
+    }
+  ]
+}
