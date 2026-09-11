@@ -11,7 +11,7 @@ const footerGroups = [
     heading: 'Group',
     items: [
       { 
-       label: '1lessThan3Girls',
+       label: '1LessThan3Girls',
         subText: 'Altares, Beatriz Faye\nCastillo, Marienel\nCortuna, Jhustine\nParaoan, Christian Jake\nPiamonte, Caurie\nSan Juan, Miguel',
 
        },
