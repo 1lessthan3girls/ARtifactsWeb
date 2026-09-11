@@ -60,7 +60,7 @@ function App() {
             <div className="hero hero-content">
               <img src={artifactsLogo} alt="ARtifacts Logo" className="logoHeader" />
               {/* <h1>ARtifacts</h1> */}
-              <p className="textHome">Step into Pasig City Museum's collection in AR-tifacts. Explore, inspect, and piece back together real 3D artifacts anytime, anywhere, right from your phone.</p>
+              <p className="textHome">Step into Pasig City Museum's collection in ARtifacts. Explore, inspect, and piece back together real 3D artifacts anytime, anywhere, right from your phone.</p>
               <a className="btn" href="#download" onClick={(e) => { e.preventDefault(); handleDownload(); }}>
                 Download
               </a>

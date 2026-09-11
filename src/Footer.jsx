@@ -4,7 +4,7 @@ const footerGroups = [
   {
     heading: 'Project',
     items: [
-      { label: 'About', subText: 'ARtifacts is developed in collaboration with Pasig City Museum, in support of the preservation and promotion of local cultural heritage. This project is created for educational purposes by fourth-year students of National University – Manila, as part of their Capstone project titled "AR-tifacts: A Gamified Augmented Reality Platform with 3D Museum Artifacts for Historical and Cultural Preservation." Through this collaboration, the team aims to make Philippine history more accessible, engaging, and memorable for present and future generations.' },
+      { label: 'About', subText: 'ARtifacts is developed in collaboration with Pasig City Museum, in support of the preservation and promotion of local cultural heritage. This project is created for educational purposes by fourth-year students of National University – Manila, as part of their Capstone project titled "ARtifacts: A Gamified Augmented Reality Platform with 3D Museum Artifacts for Historical and Cultural Preservation." Through this collaboration, the team aims to make Philippine history more accessible, engaging, and memorable for present and future generations.' },
     ],
   },
   {
