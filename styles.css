@@ -170,6 +170,14 @@ section[id] {
   text-decoration: none;
 
 }
+.about-preview-image {
+  display: block;
+  width: auto;
+  height: min(490px, 9  8vw);
+  margin: 0 auto 20px;
+  filter: drop-shadow(0 18px 22px rgba(0, 0, 0, 0.18));
+}
+
 .content-block {
   background: #ffffffdd;
   margin: 0 auto;
@@ -177,7 +185,7 @@ section[id] {
   width: min(1100px, calc(100% - 48px));
   max-width: 1100px;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
   align-items: center;
   gap: 0;
   border-radius: 18px;
