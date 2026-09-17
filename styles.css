@@ -148,12 +148,6 @@ section[id] {
   text-align: center;
 }
 
-/* .hero h1 {
-  font-size: 3rem;
-  letter-spacing: -0.05em;
-  margin-bottom: 20px;
-} */
-
 .hero p {
   max-width: 620px;
   margin: 0 auto 30px;
