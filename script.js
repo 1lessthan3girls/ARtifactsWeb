@@ -1,4 +1,4 @@
-import apkUrl from './src/app-apk/artifacts.apk';
+import apkUrl from './src/app-apk/artifacts2.apk';
 
 // Download button functionality
 export const handleDownload = () => {
